@@ -1,0 +1,532 @@
+@import '_variables.scss';
+@import '_fonts.scss';
+@import '_initalData.scss';
+
+
+
+header {
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .menu-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .logo {
+            padding: 20px;
+            text-decoration: none;
+            background: url(/images/icons/logo.jpg) center center / cover no-repeat;
+            margin-right: 30px;
+        }
+
+        nav {
+            display: flex;
+
+            a {
+                min-width: 30px;
+                text-decoration: none;
+                color: $color_text_head;
+                margin-right: 15px;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color_hover;
+                }
+            }
+
+            .nav-link_current {
+                color: $color_hover;
+            }
+        }
+    }
+
+    .purchase {
+        color: $color_text_head;
+
+        display: flex;
+        align-items: center;
+
+        .customer {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+
+            .customer_pic {
+                padding: 15px;
+                background: url(/images/icons/account.png) center center / cover no-repeat;
+            }
+
+            .customer_name {
+                padding-left: 0px;
+                color: $color_text_head;
+
+                .login {
+                    text-decoration: none;
+                    color: $color_btn;
+                    cursor: pointer;
+
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: $color_hover;
+                    }
+                }
+            }
+        }
+
+        .basket {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .basket_pic {
+                padding: 15px;
+                background: url(/images/icons/bascet.png) center center / cover no-repeat;
+            }
+
+            .basket_data {
+                padding-left: 0px;
+                color: $color_text_head;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color_hover;
+            }
+            }
+        }
+    }
+}
+
+.header-underline {
+    padding: 0 40px;
+
+    hr {
+        height: 1px;
+        background-color: $color_main;
+    }
+}
+
+.sandbox {
+    padding: 20px 40px;
+
+    a {
+        text-decoration: none;
+        color: $color_main;
+        font-weight: 500;
+
+        transition: 0.5s;
+
+        &:hover {
+            color: $color_hover;
+        }
+    }
+}
+
+.caption {
+    padding: 40px 0 60px 0;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+
+    h1 {
+        color: $color_text_head;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.7rem;
+        font-style: italic;
+    }
+}
+
+.choice {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .choice_section {
+        margin: 0 20px;
+        font-style: italic;
+        position: relative;
+        
+
+        .choice_section_name {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border-bottom: 1px solid $color_text_head;
+            position: relative;
+            z-index: 8;
+            transition: 0.5s;
+            min-width: 150px;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+
+            .choice_section_name_text {
+                font-size: 1.35rem;
+                color: $color_text_head;
+                margin-right: 20px;
+            }
+
+            .choice_section_name_arrow {
+                width: 15px;
+                height: 15px;
+                background: top center / contain no-repeat;
+            }
+
+            .arrow-down {
+                background-image: url(/images/icons/arrow-down.png)
+            }
+
+            .arrow-up {
+                background-image: url(/images/icons/arrow-up.png)
+            }
+        }
+
+        .choice_section_list {
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            left: 0;
+            top: -128px;
+            z-index: 1;
+            height: 100px;
+            min-width:  100%;
+
+            transition-duration: 1s;
+            transition-property: transform;
+
+            .choice_section_list_item {
+                padding: 5px;
+                font-size: 1.15rem;
+                color: $color_main;
+                background-color: rgba(255, 255, 255, 0.5);
+
+                cursor: pointer;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color_hover;
+                }
+            }
+        }
+
+        .choice_appearance {
+            transform: translateY(161px);
+            overflow-y: auto;
+           
+        }
+    }
+}
+
+.catalog {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+        min-width: 25%;
+        padding:20px;
+        flex: 1 1 200px;
+
+        .card-inset {
+            padding: 5px;
+        
+            .card-pic {
+                width: 90%;
+                margin: 0 auto;
+                height: 200px;
+                background: center center / contain no-repeat;
+                margin-bottom: 10px;
+
+                border: solid 1px rgb(204,204,204);
+            }
+            
+            .card-name {
+                color: $color_text_head;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .card-price {
+                text-align: center;
+            }
+
+            transition: 0.5s;
+
+            &:hover {
+                border: solid 3px $color_hover;
+            }
+
+            .add-to-basket {
+                width: 70%;
+                margin: 0 auto;
+                padding: 5px 10px;
+                border: 2px solid $color_btn;
+                border-radius: 20px;
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: $color_text_head;
+                text-align: center;
+                background-color: $color_main;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color_hover;
+                    background-color: $color_btn;
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 15px 0 70px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page {
+        padding: 7px;
+        cursor: pointer;
+
+        .page_inset {
+            width: 30px;
+            height: 30px;
+            background-color: $color_text_head;
+            border: 2px solid $color_text_head;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.5s;
+
+            &:hover {
+                background-color: white;
+                color: $color_text_head;
+            }
+
+            
+        }
+
+        .page_inset_current {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+footer {
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .footer-item {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h3 {
+            color: $color_text_head;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_main;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+
+            transition: 0.5s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .footer-item_current {
+            text-decoration: underline;
+        }
+
+        p {
+            color: $color_main;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .socialWebs_list {
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+
+            .socialWeb {
+                padding: 20px;
+                background: center center / 80% 80% no-repeat;
+                border: 2px solid $color_main;
+                margin-right: 15px;
+
+                transition: 0.5s;
+
+                &:hover {
+                    border-color: $color_hover;
+                }
+            }
+
+            .twitter {
+                background-image: url(/images/icons/twitter.svg);
+            }
+
+            .facebook {
+                background-image: url(/images/icons/facebook.svg);
+            }
+
+            .instagram {
+                background-image: url(/images/icons/instagram.svg);
+            }
+        }
+    }
+}
+
+
+//////////////////////////////////////////////////
+// Вход в личный кабинет (login.php)
+
+.sign-panel {
+    height: 100vh;
+    background-color: $color_bg;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .sign-panel-inset {
+        width: 50%;
+        min-width: 280px;
+        max-width: 500px;
+        padding: 70px 40px;
+        border: 4px solid $color_btn;
+
+        position: relative;
+
+        .sign-panel-inset_logo {
+            width: 70px;
+            height: 70px;
+            border: 7px solid $color_btn;
+            background: url(/images/icons/logo.jpg) center center / cover no-repeat;
+
+            position: absolute;
+            top: -35px;
+            left: calc(50% - 35px);
+
+            transition: 0.5s;
+
+            &:hover {
+                border-color: $color_hover;
+            }
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            color: $color_text_head;
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        form {
+
+            input {
+                display: block;
+                width: 100%;
+                outline: none;
+                border: 2px solid $color_bg;
+                padding: 5px 10px;
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            input[type="submit"] {
+                background-color: $color_bg;
+                color: white;
+
+                margin: 25px 0 0 0;
+
+                transition: 0.5s;
+
+                &:hover {
+                    font-weight: bold;
+                    background-color: $color_hover;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//////////////////////////////////////////////////
+// Личный кабинет (account.php)
+
+.lk-panel {
+    padding: 40px;
+
+    h1 {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $color_text_head;
+        text-align: center;
+
+        margin-bottom: 50px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        // font-weight: bold;
+        color: $color_main;
+        text-align: center;
+    }
+}
+
+@keyframes preloader {
+    0% {transform: rotate(0)};
+    100% {transform: rotate(360deg)};
+}
+
+.preloader {
+    animation: preloader 2s infinite;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url(/images/6.jpg) center center / contain no-repeat;
+}

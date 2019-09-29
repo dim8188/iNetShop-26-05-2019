@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Myriad Pro";
+    font-size: medium;
+    color: $color_main;
+    background-color: rgb(255, 255, 255);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
